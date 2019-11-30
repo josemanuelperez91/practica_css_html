@@ -8,6 +8,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-*:focus{
+*:focus {
   outline: none;
 }
+
+@font-face {
+  font-family: road-rage;
+  src: url(../fonts/Road_Rage.otf);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fc00ff;
+  background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+}
+

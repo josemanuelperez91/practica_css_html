@@ -1,0 +1,45 @@
+.sw-navbar {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sw-navbar-logo {
+  font-family: 'road-rage';
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 10px #fc01ff;
+  text-align: center;
+  margin: 0px 0px 0px 25px;
+}
+
+.sw-navbar-list {
+  list-style-type: none;
+  display: inherit;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+.sw-navbar-tab {
+  padding: 20px;
+  line-height: 1.5rem;
+}
+
+.sw-navbar-search input{
+  padding: 4px;
+  border-width: 0;
+  border-radius: 8px;
+}
+.sw-navbar-tab:not(.sw-navbar-search):hover {
+  cursor: pointer;
+  background-color: rgba(0, 219, 222, 0.2);
+  border-bottom: 1px solid  white;
+}
+.sw-navbar-tab a {
+  text-decoration: none;
+  color: #f8f8f8;
+}

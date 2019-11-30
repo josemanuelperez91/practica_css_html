@@ -1,0 +1,22 @@
+.sw-header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 0px;
+}
+.sw-header > * {
+  text-align: center;
+}
+
+.sw-header > h1 {
+  font-family: 'road-rage';
+  font-size: 4rem;
+  margin: 1rem 0rem;
+  color: white;
+  text-shadow: 0 0 10px #fc01ff;
+
+}
+
+.sw-header > p {
+  color: white;
+  text-shadow: 0 0 10px #00dbde;
+}
+

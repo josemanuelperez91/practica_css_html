@@ -1,22 +1,14 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #fc00ff;
-  background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);
-  background: linear-gradient(to right, #00dbde, #fc00ff);
-}
 
 .sw-main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95vh;
+  height: 75vh;
 }
 
 .sw-login-form {
   background-color: rgba(0, 0, 0, 0.7);
   margin: 0 15px;
-  min-width: 80vw;
-  max-width: 680px;
   padding: 20px 20px 10px 20px;
   border-radius: 8px;
   box-shadow: 7px 6px 7px 3px #111111;
@@ -29,7 +21,7 @@ body {
 .sw-login-form-title {
   color: white;
   text-shadow: 0 0 10px #00dbde;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-variant-caps: small-caps;
   text-align: center;
 }
@@ -37,22 +29,27 @@ body {
 .sw-login-form-form {
   display: inherit;
   flex-direction: inherit;
+  align-items: center;
 }
 
 .sw-login-form-input {
   padding: 10px;
-  width: 100%;
   margin: 10px 0px;
   border-width: 0;
   border-radius: 8px;
+  width: 50vw;
+  max-width: 480px;
+
 }
 .sw-login-form-input:focus {
   outline: none;
 }
 
 .sw-login-form-button {
-  margin: 10px 0px;
   padding: 10px;
+  margin: 10px 0px;
+  width: 50vw;
+  max-width: 480px;
   border-radius: 8px;
   border-width: 0px;
   background-color: rgba(142, 0, 222, 0.66);
