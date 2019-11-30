@@ -1,0 +1,30 @@
+.sw-footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2rem;
+}
+
+.sw-footer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+ 
+
+.sw-footer-links {
+  list-style-type: none;
+  float:right;
+}
+
+.sw-footer-links > li {
+  margin: 10px 0px;
+}
+.sw-footer-links a {
+  color: white;
+  text-decoration: none;
+}
+.sw-footer-links a:before {
+    content:"🡕 ";
+}
+.sw-footer-links a:hover {
+  text-decoration: underline;
+}

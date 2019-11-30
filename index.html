@@ -6,9 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
+    <header></header>
+    <main class="sw-main">
+        <section class="sw-login-form">
+            <h2 class="sw-login-form-title">Inicio de sesión</h2>
+            <form class="sw-login-form-form" action="catalogo.html" method="get">
+                <input class="sw-login-form-input" placeholder="Correo electrónico" type="email" name="email"
+                    id="input-email">
+                <input class="sw-login-form-input" placeholder="Contraseña" type="password" name="password"
+                    id="input-password">
+                <button class="sw-login-form-button" type="submit">Acceder a mi Catálogo</button>
+            </form>
+            <a class="sw-login-form-link" href="http://localhost:3000/recordar-contrasena.html">¿Olvidó su
+                contraseña?</a>
+        </section>
+    </main>
+    <footer class="sw-footer">
+        <ul class="sw-footer-links">
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Terminos de uso</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></li>
+            <li><a href="http://" target="_blank" rel="noopener noreferrer">Trabaja con Nosotros</a></li>
+        </ul>
+    </footer>
 
 </body>
 
