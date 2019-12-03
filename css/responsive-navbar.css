@@ -1,0 +1,27 @@
+@media all and (max-width: 911px) {
+  .sw-navbar-search input {
+    margin: 20px 0px 10px 20px;
+  }
+
+  .sw-navbar-list {
+    display: none;
+  }
+  .sw-navbar-menu-icon {
+    display: list-item;
+  }
+  .sw-navbar-list {
+    flex-flow: column;
+  }
+
+  .sw-navbar-menu-icon:focus ~ .sw-navbar-list {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .sw-navbar-list:hover {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+  }
+}
