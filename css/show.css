@@ -1,0 +1,58 @@
+.sw-show-detail {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 86px 20px 20px 20px;
+  padding: 20px;
+  box-shadow: 7px 6px 7px 3px #111111;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  min-height: 85vh;
+  align-items: center;
+  color: white;
+}
+
+.sw-show-detail .sw-show-poster {
+  width: calc(100% - 20px);
+  max-width: 1080px;
+  margin: 10px;
+  box-shadow: 0 0 4px 2px #fc00ff;
+}
+
+.sw-show-detail .sw-show-title {
+  text-shadow: 0 0 10px #00dbde;
+  font-size: 1.8rem;
+  font-variant-caps: small-caps;
+  text-align: center;
+}
+.sw-show-detail ul {
+  list-style: none;
+  padding: 0;
+}
+.sw-show-detail ul > li {
+  padding-bottom: 5px;
+}
+.actor::before {
+  content: '\1F468';
+}
+.actress::before {
+  content: '\1F469';
+}
+.sw-show-video {
+  width: calc(100% - 20px);
+  max-width: 1080px;
+
+  margin: 10px;
+  box-shadow: 0 0 4px 2px #00dbde;
+}
+@media (max-width: 800px) {
+  .sw-show-detail p,
+  .sw-show-detail h4,
+  .sw-show-detail h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .sw-show-detail .sw-show-synopsis {
+    font-size: 0.9rem;
+  }
+}

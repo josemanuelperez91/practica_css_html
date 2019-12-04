@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/catalog.css">
+    <link rel="stylesheet" href="./css/show.css">
     <link rel="stylesheet" href="./css/responsive-navbar.css">
 
 </head>
@@ -22,7 +22,7 @@
         <button class="sw-navbar-menu-icon"><img src="./icons/menu.svg" alt=""></button>
 
         <ul class="sw-navbar-list">
-            <li class="sw-navbar-tab sw-navbar-search"><input placeholder="Buscar..." type="text" name="busqueda"
+            <li class="sw-navbar-tab sw-navbar-search"><input placeholder="Buscar..." type="search" name="busqueda"
                     id="input-busqueda"></li>
             <li class="sw-navbar-tab"><a href="#novedades">Novedades</a></li>
             <li class="sw-navbar-tab"><a href="#peliculas">Peliculas</a></li>
@@ -32,6 +32,53 @@
     </nav>
 
     <main class="sw-main">
+
+        <section class="sw-show-detail">
+
+            <picture>
+                <source media="(max-width: 600px)" srcset="./images/the-x-files-512.jpg">
+                <source media="(max-width: 1000px)" srcset="./images/the-x-files-1024.jpg">
+                <source media="(min-width: 1800px)" srcset="./images/the-x-files-2080.jpg">
+                <img src="./images/the-x-files-1024.jpg" class="sw-show-poster" alt="expediente x">
+            </picture>
+
+            <h1 class="sw-show-title">
+                Expediente X
+            </h1>
+            <p>⭐⭐⭐⭐</p>
+            <h4><i>1993</i></h4>
+            <p class="sw-show-synopsis">
+                Fox Mulder (encargado de los Expedientes X desde 1990) es un agente especial del FBI fascinado por los
+                sucesos paranormales y por el fenómeno ovni desde que su hermana desapareciera a los 8 años de edad.
+                Después de estudiar psicología en Inglaterra ingresó al FBI en 1986 (habiendo terminado como el mejor de
+                su promoción). En los Expedientes X –olvidados hasta que él da con ellos– descubre casos no resueltos de
+                carácter grotesco: desapariciones y muertes inexplicables, avistamiento de ovnis, presencia de seres
+                extraños... Cuenta con contactos en el Senado y con la ayuda ocasional de un trío de excéntricos
+                expertos en informática y comunicaciones que se hacen llamar Los pistoleros solitarios.
+            </p>
+            <p><b>Reparto:</b></p>
+
+            <ul>
+                <li class="actress">
+                    Gillian Anderson
+                </li>
+                <li class="actor">
+                    David Duchovny
+                </li>
+            </ul>
+
+            <video muted controls class="sw-show-video">
+                <source src="./video/x-files-trailer.webm" type="video/webm">
+                <source src="./video/x-files-trailer.mp4" type="video/mp4">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+
+        </section>
+
+        <section>
+
+        </section>
+
     </main>
     <footer class="sw-footer">
         <ul class="sw-footer-links">
