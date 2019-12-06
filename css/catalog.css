@@ -1,8 +1,10 @@
+
 .sw-main {
   margin: 86px 20px 20px 20px;
 }
 
 .sw-show-grid {
+  display: -ms-grid;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -22,13 +24,16 @@
 
 .sw-show-card:hover .sw-show-info {
   opacity: 0.9;
-  box-shadow: 0 0 10px 4px white;
+  -webkit-box-shadow: 0 0 10px 4px white;
+          box-shadow: 0 0 10px 4px white;
 }
 
 .sw-show-info {
   opacity: 0;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
   transition: 0.5s ease;
-  background-color: rgba(142, 0, 222);
+  background-color: rgb(142, 0, 222);
   color: white;
   font-size: 1rem;
   position: absolute;

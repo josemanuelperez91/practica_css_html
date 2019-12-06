@@ -10,16 +10,23 @@
     display: list-item;
   }
   .sw-navbar-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
     flex-flow: column;
   }
 
   .sw-navbar-menu-icon:focus ~ .sw-navbar-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     padding: 0px;
   }
 
   .sw-navbar-list:hover {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     padding: 0px;
