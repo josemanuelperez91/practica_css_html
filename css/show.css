@@ -1,13 +1,18 @@
 @keyframes botonPlay {
   0% {
     opacity: 0;
-    transform: rotate(90deg);
+    transform: skew(180deg);
   }
   50% {
     opacity: 0.5;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes scalePlay {
+  50% {
+    transform: scale(1.2);
   }
 }
 
@@ -78,20 +83,21 @@
   box-shadow: 8px 4px 6px 0px white;
   transform: translate(-6px, -3px);
 }
-
+.sw-show-chapter:hover > img {
+  filter: brightness(0.7);
+}
 .sw-show-chapter:hover:after {
   animation: botonPlay 0.3s forwards;
-  background-image: url('../icons/play.png');
-  background-size: 100px;
-  background-repeat: no-repeat;
-  background-position: center;
+
   display: block;
-  width: 200px;
-  bottom: 280px;
-  height: 200px;
+  bottom: 200px;
   position: relative;
   z-index: 999;
-  content: '';
+  font-family: 'road-rage';
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 10px #fc01ff;
+  content: 'VERLO YA!';
 }
 
 .sw-show-detail > * {
@@ -135,6 +141,24 @@
   max-width: 800px;
   align-self: center;
   height: 44vh;
+}
+
+.sw-show-animated-poster:after {
+  animation: scalePlay 2s infinite;
+  background-image: url('../icons/play.png');
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  bottom: 60%;
+  height: 100px;
+  position: relative;
+  z-index: 999;
+  content: '';
+}
+
+.sw-show-animated-poster:hover::after {
+  background: none;
 }
 
 .sw-show-poster {
