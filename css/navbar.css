@@ -1,5 +1,6 @@
 .sw-navbar {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgb(0, 0, 0);
+
   position: fixed;
   top: 0;
   width: 100%;
@@ -32,8 +33,11 @@
 }
 .sw-navbar-tab {
   line-height: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
 }
-
+.sw-navbar-search {
+  padding-right: 10px;
+}
 .sw-navbar-search input {
   padding: 5px;
   margin-top: 18px;
@@ -63,7 +67,7 @@
 }
 .sw-navbar-tab:not(.sw-navbar-search):hover {
   cursor: pointer;
-  background-color: rgba(0, 219, 222, 0.2);
+  background-color: rgba(0, 219, 222, 0.9);
   border-bottom: 1px solid white;
 }
 .sw-navbar-tab a {

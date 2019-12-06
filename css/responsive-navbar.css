@@ -1,4 +1,6 @@
 @media all and (max-width: 911px) {
+
+
   .sw-navbar-search input {
     margin: 20px 0px 10px 20px;
   }
@@ -15,13 +17,14 @@
     -ms-flex-flow: column;
     flex-flow: column;
   }
-
   .sw-navbar-menu-icon:focus ~ .sw-navbar-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
     padding: 0px;
+    margin-left: -60px;
+    background-color: rgb(0, 0, 0);
   }
 
   .sw-navbar-list:hover {
@@ -30,5 +33,7 @@
     display: flex;
     width: 100%;
     padding: 0px;
+    margin-left: -60px;
+    background-color: rgb(0, 0, 0);
   }
 }

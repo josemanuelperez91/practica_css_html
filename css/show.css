@@ -175,6 +175,7 @@
 .sw-show-animated-poster:hover .sw-show-video {
   display: block;
 }
+
 .sw-show-animated-poster:hover .sw-show-poster {
   visibility: hidden;
 }
@@ -229,6 +230,21 @@
   object-fit: fill;
 }
 
+/* Excepción para Edge ya que no es capaz de reproducir videos incrustados en webm */
+
+@supports (-ms-ime-align: auto) {
+  .sw-show-animated-poster:hover .sw-show-video {
+    display: none;
+  }
+  .sw-show-animated-poster:hover .sw-show-poster {
+    visibility: visible;
+  }
+
+  .sw-show-animated-poster:after {
+    background: none;
+  }
+}
+
 @media (max-width: 800px) {
   .sw-show-detail p,
   .sw-show-detail h4,
@@ -266,5 +282,11 @@
   }
   .sw-show-chapter:hover:after {
     left: 0px;
+  }
+
+  .sw-show-animated-poster:hover .sw-show-video {
+    -webkit-transform: translateY(-22px);
+    -ms-transform: translateY(-22px);
+    transform: translateY(-22px);
   }
 }
