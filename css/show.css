@@ -1,22 +1,77 @@
-.sw-show-detail {
+.sw-main {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(0, 0, 0, 0.7);
   margin: 86px 20px 20px 20px;
   padding: 20px;
   box-shadow: 7px 6px 7px 3px #111111;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  /* justify-content: space-between; */
   min-height: 85vh;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sw-show-detail {
+  display: inherit;
+  flex-direction: column;
+  color: white;
+}
+.sw-show-chapters {
+  display: inherit;
+  flex-direction: column;
+  max-height: 1300px;
+  overflow: auto;
+}
+
+.sw-show-chapter {
+  cursor: pointer;
+  width: 200px;
+  border-radius: 10px;
+  min-height: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: 10px;
+}
+.sw-show-chapter > img {
+  width: 100%;
+  margin-top: -50px;
+}
+.sw-show-chapter > span {
+  position: relative;
+  bottom: 85px;
+  left: 5px;
+  font-size: 1.2rem;
   color: white;
 }
 
+.sw-show-chapter:hover {
+  box-shadow: 8px 0px 6px 0px white;
+  transform: translateX(-6px);
+}
+
+.sw-show-detail > * {
+  text-align: center;
+}
 .sw-show-detail .sw-show-poster {
   width: calc(100% - 20px);
-  max-width: 1080px;
-  margin: 10px;
+  max-width: 800px;
   box-shadow: 0 0 4px 2px #fc00ff;
+}
+
+.sw-show-poster {
+  animation-duration: 3s;
+  animation-name: brillo;
+  animation-iteration-count: infinite;
+}
+@keyframes brillo {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
 }
 
 .sw-show-detail .sw-show-title {
@@ -24,6 +79,10 @@
   font-size: 1.8rem;
   font-variant-caps: small-caps;
   text-align: center;
+}
+.sw-show-synopsis {
+  text-align: justify;
+  max-width: 800px;
 }
 .sw-show-detail ul {
   list-style: none;
@@ -39,9 +98,9 @@
   content: '\1F469';
 }
 .sw-show-video {
+  align-self: center;
   width: calc(100% - 20px);
-  max-width: 1080px;
-
+  max-width: 500px;
   margin: 10px;
   box-shadow: 0 0 4px 2px #00dbde;
 }
@@ -53,6 +112,19 @@
     margin-bottom: 10px;
   }
   .sw-show-detail .sw-show-synopsis {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sw-main {
+    justify-content: center;
+  }
+  .sw-show-chapters {
+    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
   }
 }
