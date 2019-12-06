@@ -6,6 +6,8 @@
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
+
 }
 .sw-show-card {
   width: 250px;
@@ -15,6 +17,7 @@
 .sw-show-card img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 
 .sw-show-card:hover .sw-show-info {
@@ -34,6 +37,8 @@
   height: 350px;
   padding: 0 10px 0 10px;
   overflow: overlay;
+  border-radius: 10px;
+
 }
 
 .sw-show-info ul {

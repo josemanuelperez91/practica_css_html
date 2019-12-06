@@ -35,12 +35,19 @@
 
         <section class="sw-show-detail">
 
-            <picture>
-                <source media="(max-width: 600px)" srcset="./images/the-x-files-512.jpg">
-                <source media="(max-width: 1000px)" srcset="./images/the-x-files-1024.jpg">
-                <source media="(min-width: 1800px)" srcset="./images/the-x-files-2080.jpg">
-                <img src="./images/the-x-files-1024.jpg" class="sw-show-poster" alt="expediente x">
-            </picture>
+            <div class="sw-show-animated-poster">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="./images/the-x-files-512.jpg">
+                    <source media="(max-width: 1000px)" srcset="./images/the-x-files-1024.jpg">
+                    <source media="(min-width: 1800px)" srcset="./images/the-x-files-2080.jpg">
+                    <img src="./images/the-x-files-1024.jpg" class="sw-show-poster" alt="expediente x">
+                </picture>
+                <video controls class="sw-show-video">
+                    <source src="./video/x-files-trailer.webm" type="video/webm">
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
+            </div>
+
 
             <h1 class="sw-show-title">
                 Expediente X
@@ -67,12 +74,10 @@
                 </li>
             </ul>
 
-            <video controls class="sw-show-video" poster="./images/trailer-poster.jpg">
-                <source src="./video/x-files-trailer.webm" type="video/webm">
-                Sorry, your browser doesn't support embedded videos.
-            </video>
+
 
         </section>
+
 
         <section class="sw-show-chapters">
             <article class="sw-show-chapter">

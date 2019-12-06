@@ -1,15 +1,29 @@
+@keyframes botonPlay {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .sw-main {
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.7);
-  margin: 86px 20px 20px 20px;
+  margin: 86px auto 20px auto;
   padding: 20px;
   box-shadow: 7px 6px 7px 3px #111111;
-  min-height: 85vh;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 1201px;
 }
+
 .sw-show-detail {
   display: inherit;
   flex-direction: column;
@@ -18,8 +32,24 @@
 .sw-show-chapters {
   display: inherit;
   flex-direction: column;
-  max-height: 1300px;
-  overflow: auto;
+  max-height: 900px;
+  overflow: overlay;
+  padding: 0 20px 0 10px;
+}
+
+.sw-show-chapters::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: white;
+}
+
+.sw-show-chapters::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 10px;
+}
+
+.sw-show-chapters::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #00dbde;
 }
 
 .sw-show-chapter {
@@ -30,6 +60,7 @@
   height: 200px;
   overflow: hidden;
   margin: 10px;
+  transition: 0.2s ease;
 }
 .sw-show-chapter > img {
   width: 100%;
@@ -44,34 +75,27 @@
 }
 
 .sw-show-chapter:hover {
-  box-shadow: 8px 0px 6px 0px white;
-  transform: translateX(-6px);
+  box-shadow: 8px 4px 6px 0px white;
+  transform: translate(-6px, -3px);
+}
+
+.sw-show-chapter:hover:after {
+  animation: botonPlay 0.3s forwards;
+  background-image: url('../icons/play.png');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 200px;
+  bottom: 280px;
+  height: 200px;
+  position: relative;
+  z-index: 999;
+  content: '';
 }
 
 .sw-show-detail > * {
   text-align: center;
-}
-.sw-show-detail .sw-show-poster {
-  width: calc(100% - 20px);
-  max-width: 800px;
-  box-shadow: 0 0 4px 2px #fc00ff;
-}
-
-.sw-show-poster {
-  animation-duration: 3s;
-  animation-name: brillo;
-  animation-iteration-count: infinite;
-}
-@keyframes brillo {
-  0% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.5);
-  }
-  100% {
-    filter: brightness(1);
-  }
 }
 
 .sw-show-detail .sw-show-title {
@@ -97,13 +121,40 @@
 .actress::before {
   content: '\1F469';
 }
-.sw-show-video {
-  align-self: center;
-  width: calc(100% - 20px);
-  max-width: 500px;
-  margin: 10px;
-  box-shadow: 0 0 4px 2px #00dbde;
+
+.sw-show-animated-poster:hover .sw-show-video {
+  display: block;
 }
+.sw-show-animated-poster:hover .sw-show-poster {
+  visibility: hidden;
+}
+
+.sw-show-animated-poster {
+  box-shadow: 0 0 4px 2px #fc00ff;
+  width: 85vw;
+  max-width: 800px;
+  align-self: center;
+  height: 44vh;
+}
+
+.sw-show-poster {
+  width: 100%;
+  height: 44vh;
+  max-width: 800px;
+  object-position: top;
+  object-fit: cover;
+}
+.sw-show-video {
+  width: 85vw;
+  height: 44vh;
+
+  max-width: 800px;
+  position: absolute;
+  top: 106px;
+  display: none;
+  object-fit: fill;
+}
+
 @media (max-width: 800px) {
   .sw-show-detail p,
   .sw-show-detail h4,
@@ -126,5 +177,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
+    padding: 10px 0 0 0;
+    border-left: none;
   }
 }
